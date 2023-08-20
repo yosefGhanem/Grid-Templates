@@ -1,0 +1,31 @@
+/* Creating a block diagram using pen and paper before starting to work on a grid is always a good idea.  */
+body {
+    display: grid;
+    height: 200px;
+    /*3 rows and 2 columns*/
+    grid-template-areas:"head head" /*'head' is written twice to imply two columns */
+                        "nav main"
+                        "footer footer";
+    grid-template-rows: 30px 1fr 30px; 
+    grid-template-columns: 150px 1fr; 
+
+}
+
+header {
+    grid-area: head;/*means take the whole head*/
+    background-color: lightsalmon;
+}
+
+.nav-bar{
+    grid-area: nav;
+    background-color: lightblue; 
+}
+
+main{
+    grid-area: main;
+    background-color: lightyellow;
+}
+footer {
+    grid-area: footer;
+    background-color: firebrick;
+}
